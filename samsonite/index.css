@@ -1,0 +1,315 @@
+@import url(./reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+body {
+  font-size: 14px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 5px 20px;
+  color: #333;
+  font-weight: 500;
+  font-family: 'Orbitron', sans-serif;
+}
+
+nav ul li a.on {
+  background: #e72433;
+  color: #fff;
+  border-radius: 999px;
+}
+
+article.visual {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+#sect1 article.visual {
+  background-image: url(./images/section1.png);
+}
+
+#sect2 article.visual {
+  background-image: url(./images/section2.png);
+  background-size: cover;
+}
+
+#sect3 article.visual {
+  background-image: url(./images/section3.png);
+}
+
+#sect4 article.visual {
+  background-image: url(./images/section4.png);
+}
+
+#sect5 article.visual {
+  background-image: url(./images/section5.png);
+}
+
+#sect1 article.content p {
+  font-size: 2rem;
+}
+
+article figure img {
+  width: 90%;
+}
+
+header {
+  height: 55px;
+  background: #fff;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+h1 img {
+  height: 20px;
+}
+
+#sect1 article h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+}
+#sect1 article h2 img {
+  width: 90%;
+}
+
+#sect1 article.content p {
+  width: 80%;
+  margin: auto;
+}
+
+#sect1 article.content {
+  height: 30vh;
+}
+
+article.visual .title {
+  color: #fff;
+  position: absolute;
+}
+
+article.visual .title h2 {
+  font-size: 2rem;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.title p {
+  margin-top: 10px;
+}
+
+section article.content .desc {
+  padding: 2rem;
+}
+
+.color ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.color ul li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.desc h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.desc p.sub-title {
+  font-size: 14px;
+  color: #212529;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.desc p.sub-title {
+  content: '';
+  color: #555;
+  position: relative;
+}
+
+.desc p.sub-title::after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  background: #000;
+  width: 60px;
+  left: 0;
+  top: 25px;
+}
+
+.desc h4 {
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+
+.desc p.summary {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+section:nth-of-type(odd) article.content .desc {
+  order: 1;
+}
+
+section:nth-of-type(odd) article.content figure {
+  order: 2;
+}
+
+section article.content figure {
+  position: relative;
+  top: -100px;
+}
+h5 {
+  font-size: 50px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 999;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 5px 0;
+    background: #000;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  #sect1 article.content p {
+    font-size: 1.5rem;
+  }
+
+  article figure {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 img.pc {
+    display: none;
+  }
+
+  h2 img.m-logo {
+    display: block;
+  }
+  #sect1 article h2 img {
+    min-width: 326px;
+  }
+  #sect1 article.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  article.content {
+    position: relative;
+  }
+
+  article.visual .title {
+    left: 10%;
+    top: 10%;
+    opacity: 0;
+    transition: .5s;
+    transform: translate(0, 100px);
+  }
+  section.on article.visual .title {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  article.content {
+    height: 60vh;
+    display: flex;
+  }
+
+  article.content div.desc {
+    width: 50%;
+  }
+
+  article.content figure {
+    width: 50%;
+  }
+
+  article.visual .title {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: .5s;
+  
+  }
+ 
+  section.on article.visual .title {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  
+  section article.content .desc,
+  section:nth-of-type(even) article.content figure {
+    height: 440px;
+    width: 50%;
+  }
+
+  article.visual {
+    background-attachment: fixed;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  h1 {
+    padding-left: 50px;
+  }
+
+  nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 img.pc {
+    display: block;
+  }
+
+  h2 img.m-logo {
+    display: none;
+  }
+
+  .desc p.summary {
+    margin: 20px 0;
+    width: 90%;
+  }
+}
