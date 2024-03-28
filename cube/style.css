@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "GmarketSansMedium";
+  line-height: 21px;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #3D464B;
+}
+
+nav div {
+  position: absolute;
+  width: 33.3333333333vh;
+  height: 33.3333333333vh;
+  transition: 0.35s;
+}
+nav div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+nav div a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+nav div a.on::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+}
+nav .m1 {
+  background: url(./img/menu_1-1.png) no-repeat center;
+  background-size: cover;
+  top: 0%;
+}
+nav .m1:hover {
+  background: url(./img/menu_1-2.jpg) no-repeat center;
+  background-size: cover;
+}
+nav .m2 {
+  background: url(./img/menu_2-1.png) no-repeat center;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .m2:hover {
+  background: url(./img/menu_2-2.jpg) no-repeat center;
+  background-size: cover;
+}
+nav .m3 {
+  background: url(./img/menu_3-1.jpg) no-repeat center;
+  background-size: cover;
+  bottom: 0%;
+}
+nav .m3:hover {
+  background: url(./img/menu_3-2.jpg) no-repeat center;
+  background-size: cover;
+}
+nav .m4 {
+  background: url(./img/menu_4-1.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  top: 0%;
+}
+nav .m4:hover {
+  background: url(./img/menu_4-2.jpg) no-repeat center;
+  background-size: cover;
+}
+nav .m5 {
+  background: url(./img/menu_5-1.jpg) no-repeat center;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .m5:hover {
+  background: url(./img/menu_5-2.jpg) no-repeat center;
+  background-size: cover;
+}
+nav .m6 {
+  background: url(./img/menu_6-1.jpg) no-repeat center;
+  background-size: cover;
+  bottom: 0%;
+}
+nav .m6:hover {
+  background: url(./img/menu_6-2.jpg) no-repeat center;
+  background-size: cover;
+}
+nav .left {
+  left: 0%;
+}
+nav .right {
+  right: 0%;
+}
+
+.box {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1250px;
+}
+.box #cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+.box #cube.cube0 {
+  transform: translateZ(-250px) rotateY(0deg);
+}
+.box #cube.cube1 {
+  transform: translateZ(-250px) rotateY(-180deg);
+}
+.box #cube.cube2 {
+  transform: translateZ(-250px) rotateY(90deg);
+}
+.box #cube.cube3 {
+  transform: translateZ(-250px) rotateY(-90deg);
+}
+.box #cube.cube4 {
+  transform: translateZ(-250px) rotatex(-90deg);
+}
+.box #cube.cube5 {
+  transform: translateZ(-250px) rotateX(90deg);
+}
+.box #cube .face {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0px;
+}
+.box #cube .face.FRONT {
+  transform: rotateY(0deg) translateZ(250px);
+  background: url(./img/main_1.jpg) no-repeat center;
+  background-size: cover;
+}
+.box #cube .face.BACK {
+  transform: rotateY(180deg) translateZ(250px);
+  background: url(./img/main_2.jpg) no-repeat center;
+  background-size: cover;
+}
+.box #cube .face.LEFT {
+  transform: rotateY(-90deg) translateZ(250px);
+  background: url(./img/main_3.jpg) no-repeat center;
+  background-size: cover;
+}
+.box #cube .face.RIGHT {
+  transform: rotateY(90deg) translateZ(250px);
+  background: url(./img/main_4.jpg) no-repeat center;
+  background-size: cover;
+}
+.box #cube .face.TOP {
+  transform: rotatex(90deg) translateZ(250px);
+  background: url(./img/main_5.jpg) no-repeat center;
+  background-size: cover;
+}
+.box #cube .face.BOTTOM {
+  transform: rotatex(-90deg) translateZ(250px);
+  background: url(./img/main_6.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.contents .title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 500px;
+  height: 227px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.contents .title.t0 {
+  background: url(./img/title_1.png) no-repeat center;
+}
+.contents .title.t1 {
+  background: url(./img/title_2.png) no-repeat center;
+}
+.contents .title.t2 {
+  background: url(./img/title_3.png) no-repeat center;
+}
+.contents .title.t3 {
+  background: url(./img/title_4.png) no-repeat center;
+}
+.contents .title.t4 {
+  background: url(./img/title_5.png) no-repeat center;
+  background-size: 40%;
+}
+.contents .title.t5 {
+  background: url(./img/title_6.png) no-repeat center;
+}
+.contents .text {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 1000px;
+  height: 226px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contents .text .t-in {
+  display: none;
+  text-align: center;
+  font-size: 22px;
+}
+.contents .text .t-in.on {
+  display: block;
+}
+.contents .btn {
+  position: absolute;
+  top: 2%;
+  left: 67.5%;
+  display: flex;
+  gap: 10px;
+}
+.contents .btn a {
+  font-size: 15px;
+  padding: 3px 10px;
+  border-radius: 35px;
+  text-align: center;
+  color: #fff;
+  transition: 0.35s;
+}
+.contents .btn a:nth-child(1) {
+  background-color: #ff7e6b;
+  border: 2px solid #ff7e6b;
+}
+.contents .btn a:nth-child(1):hover {
+  background-color: #fff;
+  color: #ff7e6b;
+}
+.contents .btn a:nth-child(2) {
+  background-color: #12cfca;
+  border: 2px solid #12cfca;
+}
+.contents .btn a:nth-child(2):hover {
+  background-color: #fff;
+  color: #12cfca;
+}
