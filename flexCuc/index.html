@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexcuc</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-scrollbar-drag {
+            background: #ed6d00;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><img src="logo_on.png" alt=""></h1>
+        <p>당신이 상상했던 <b>Stylish Kitchen Life</b></p>
+    </header>
+    <main>
+
+        <div class="main-content">
+            <div class="video">
+                <video src="flexcuc_launching_movie.mp4" autoplay muted loop></video>
+
+            </div>
+            <ul class="btn flex">
+                <li class="story">Story</li>
+                <li class="recipe">Recipe</li>
+            </ul>
+        </div>
+
+        <div class="mainImg">
+            <img src="./flex.png" alt="">
+        </div>
+    </main>
+    <section id="sect1">
+        <span class="top"></span>
+        <span class="right"></span>
+        <span class="bottom"></span>
+        <span class="left"></span>
+        <div class="content">
+            <a href="#" class="sect1-close"><img src="close.png" alt=""></a>
+            <img class="sect1-img" src="scene1.jpg" alt="">
+        </div>
+    </section>
+    <section id="sect2">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./recipe_ (1).jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./recipe_ (1).png" alt=""></div>
+                <div class="swiper-slide"><img src="./recipe_ (2).jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./recipe_ (2).png" alt=""></div>
+                <div class="swiper-slide"><img src="./recipe_ (3).jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./recipe_ (4).jpg" alt=""></div>
+
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <a href="#" class="sect2-close"><img src="close.png" alt=""></a>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            mousewheel: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+        });
+
+        //sect1 이벤트 ----------------------------------------
+        $('.btn .story').click(function () {
+            mainHide()
+            lineShow()
+            sect1Show()
+        })
+
+        $('.sect1-close').click(function () {
+            lineHide()
+            mainShow()
+        })
+        //sect2 이벤트 ----------------------------------------
+        $('.btn .recipe').click(function () {
+            mainHide()
+            sect2Show()
+        })
+
+        $('.sect2-close').click(function () {
+            sect2Hide()
+            mainShow()
+        })
+        //메인 사라져 ----------------------------------------
+        function mainHide() {
+
+            $('.video').css({
+                'transition': '.35s',
+                'transform': 'translateX(-1000px)'
+            })
+            $('.btn').animate({ 'bottom': '-500px' }, 500)
+            $('.mainImg').animate({ 'margin-left': '720px' }, 700)
+
+        }
+        //메인 나와 ----------------------------------------
+        function mainShow() {
+            $('.video').css({
+                'transition': '.5s',
+                'transform': 'translateX(0px)'
+            })
+            $('.btn').animate({ 'bottom': '-60px' }, 500)
+            $('.mainImg').animate({ 'margin-left': '340px' }, 500)
+
+        }
+        //sect1나와 ----------------------------------------
+        function sect1Show() {
+            $('#sect1').fadeIn(5000)
+
+        }
+        //sect1 사라져 ----------------------------------------
+        function sect1Hide() {
+
+        }
+        //라인그려져 ----------------------------------------
+        function lineShow() {
+            $('#sect1').delay(500).fadeIn(500, function () {
+                $('.top').animate({ 'width': '100%' }, 500, function () {
+                    $('.right').animate({ 'height': '100%' }, 500, function () {
+                        $('.bottom').animate({ 'width': '100%' }, 500, function () {
+                            $('.left').animate({ 'height': '100%' }, 500, function () {
+                                $('.sect1-img').fadeIn()
+                                $('.sect1-close').show()
+                            })
+                        })
+                    })
+                })
+            })
+        }
+        //라인사라져 ----------------------------------------
+        function lineHide() {
+            $('.top').animate({ 'width': '0%' }, 500)
+            $('.right').animate({ 'height': '0%' }, 500)
+            $('.bottom').animate({ 'width': '0%' }, 500)
+            $('.left').animate({ 'height': '0%' }, 500)
+            $('.sect1-img').fadeOut(500)
+            $('.sect1-close').hide()
+        }
+        //sect2나와 ----------------------------------------
+        function sect2Show() {
+            $('#sect2').fadeIn().animate({ 'height': '50vh' }, 500)
+        }
+        //sect2 사라져 ----------------------------------------
+        function sect2Hide() {
+
+            $('#sect2').animate({ 'height': '0vh' }, 500).fadeOut()
+        }
+
+    </script>
+</body>
+
+</html>
