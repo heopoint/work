@@ -1,0 +1,105 @@
+@import url(/reset.css);
+
+html,
+body {
+    height: 100%;
+}
+
+/*  */
+.wrap {
+    display: flex;
+    height: 100%;
+
+}
+
+.flex {
+    display: flex;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.vslide-container,
+.hslide-box {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.hslide-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hslide-container {
+    width: 50%;
+
+    overflow: hidden;
+
+}
+
+.hslide {
+    width: 25%;
+}
+
+/*각각 지정하지 않으면 옆으로 붙음 */
+
+.hslide ul.item {
+    display: flex;
+    gap: 10px;
+}
+
+.hslide ul.item li {
+    flex: 1;
+    text-align: center;
+
+}
+
+.hslide ul li img {
+    height: 140px;
+}
+.hslide ul li a{display: block}
+.hslide ul li a.on{background: #dad8d8;}
+.hslide-wrap {
+    width: 400%;
+    position: relative;
+    left: -100%;
+}
+
+.hslide4 ul li img {
+    width: 140px;
+}
+
+a.arrow {
+    position: absolute;
+}
+
+a.prev {
+    left: 0;
+}
+
+a.next {
+    right: 0;
+}
+
+.vslide-container {
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+.vslide-wrap {
+    position: relative;
+    height: 400%;
+    top: -100%;
+}
+.vslide {
+    height: 25%;
+}
+
+.h-group li{display: none;}
+.h-group li.on{display: block;}

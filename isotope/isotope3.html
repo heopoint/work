@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* force scrollbar */
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* ---- isotope ---- */
+
+        .grid {
+            background: #DDD;
+      width: 100%;
+         
+            border: 10px solid #000;
+        }
+.container{max-width: 1200px;margin: auto;}
+        /* clear fix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .grid-item {
+            width:180px
+        }
+
+        .grid-item {
+            float: left;
+        }
+
+        .grid-item img {
+            display: block;
+            max-width: 100%;
+        }
+        ul.menu li a.on{background: #000;color: #fff;}
+        ul.menu li a{display: inline-block;padding: 10px}
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a class="on" href="#" data-fiter="*" >All</a></li>
+        <li><a href="#" data-filter=".web">Web Template</a></li>
+        <li><a href="#" data-filter=".Logos">Logos</a></li>
+        <li><a href="#" data-filter=".Drawings">Drawings</a></li>
+        <li><a href="#" data-filter=".UI">UI Elements</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="grid">
+            <div class="grid-item web"><img src="./dribbble-1.png" alt=""></div>
+            <div class="grid-item Logos"><img src="./dribbble-2.png" alt=""></div>
+            <div class="grid-item Drawings"><img src="./dribbble-3.png" alt=""></div>
+            <div class="grid-item Drawings"><img src="./dribbble-4.png" alt=""></div>
+            <div class="grid-item web"><img src="./dribbble-5.png" alt=""></div>
+            <div class="grid-item UI"><img src="./dribbble-6.png" alt=""></div>
+            <div class="grid-item Drawings"><img src="./dribbble-7.png" alt=""></div>
+            <div class="grid-item Logos"><img src="./dribbble-8.png" alt=""></div>
+            <div class="grid-item web"><img src="./dribbble-9.png" alt=""></div>
+            <div class="grid-item UI"><img src="./dribbble-10.png" alt=""></div>
+            <div class="grid-item Logos"><img src="./dribbble-11.png" alt=""></div>
+            <div class="grid-item UI"><img src="./dribbble-12.png" alt=""></div>
+            <div class="grid-item web"><img src="./dribbble-13.png" alt=""></div>
+            <div class="grid-item UI"><img src="./dribbble-14.png" alt=""></div>
+            <div class="grid-item Drawings"><img src="./dribbble-15.png" alt=""></div>
+            <div class="grid-item Logos"><img src="./dribbble-16.png" alt=""></div>
+            <div class="grid-item UI"><img src="./dribbble-17.png" alt=""></div>
+            <div class="grid-item Logos"><img src="./dribbble-18.png" alt=""></div>
+            <div class="grid-item Drawings"><img src="./dribbble-19.png" alt=""></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+
+        var $grid = $('.grid').imagesLoaded(function () {
+            $grid.isotope({
+                itemSelector: '.grid-item',
+
+                masonry: {
+                    columnWidth: 180,
+                    fitWidth: true,
+                    gutter:20
+                }
+
+            });
+        });
+        $('.menu li a').on('click',  function (e) {
+            e.preventDefault()
+            $('.menu li a').removeClass('on')
+            $(this).addClass('on')
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+    </script>
+</body>
+
+</html>

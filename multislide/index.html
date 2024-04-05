@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="hslide-box">
+            <div class="hslide-container">
+
+                <div class="hslide-wrap flex">
+                    <div class="hslide hslide4">
+                        <ul class="h-group">
+                            <li><b>오르닉유기농아이슬란딕요거트 300g</b>삼양목장의 유기농 원유를 3배 농축시켜 맛과 영양을 강화한 프리미엄 요거트</li>
+                            <li><b>오르닉유기농아이슬란딕요거트 100g</b>삼양목장의 유기농 원유를 3배 농축시켜 맛과 영양을 강화한 프리미엄 요거트</li>
+
+                        </ul>
+                        <figure><img src="./imgs/itemd1.jpg" alt=""></figure>
+                        <ul class="item">
+                            <li><a class="on" href="./imgs/itemd1.jpg"><img src="./imgs/item4_ (2).png" alt=""></a></li>
+                            <li><a href="./imgs/itemd2.jpg"><img src="./imgs/item4_ (1).png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="hslide hslide1">
+                        <ul class="h-group">
+                            <li><b>삼양라면</b>깔끔한 감칠맛으로 대한민국을 사로잡다</li>
+                            <li><b>삼양라면 매운맛</b>얼큰한 감칠맛으로 대한민국을 사로잡다</li>
+                            <li><b>불닭볶음면</b>K-SPICY의 아이콘 계속 끌리는 매운맛</li>
+                        </ul>
+                        <figure><img src="./imgs/itema1.jpg" alt=""></figure>
+                        <ul class="item">
+                            <li><a class="on" href="./imgs/itema1.jpg"><img src="./imgs/item1_ (1).png" alt=""></a></li>
+                            <li><a href="./imgs/itema2.jpg"><img src="./imgs/item1_ (2).png" alt=""></a></li>
+                            <li><a href="./imgs/itema3.jpg"><img src="./imgs/item1_ (3).png" alt=""></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="hslide hslide2">
+                        <ul class="h-group">
+                            <li><b>맵탱 흑후추소고기라면</b>맵콤한 국물이 필요한 순간</li>
+                            <li><b>맵탱 마늘조개</b>라면맵콤한 국물이 필요한 순간</li>
+                            <li><b>짜짜로니</b>뭉침없이 부드럽게 비벼지는 액상소스만의 노하우</li>
+                        </ul>
+                        <figure><img src="./imgs/itemc1.jpg" alt=""></figure>
+                        <ul class="item">
+                            <li><a class="on" href="./imgs/itemc1.jpg"><img src="./imgs/item3_ (1).png" alt=""></a></li>
+                            <li><a href="./imgs/itemc2.jpg"><img src="./imgs/item3_ (2).png" alt=""></a></li>
+                            <li><a href="./imgs/itemc3.jpg"><img src="./imgs/item3_ (3).png" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hslide hslide3">
+                        <ul class="h-group">
+                            <li><b>쿠티크 마라크림파스타</b>부드러운 크림 속 마라의 얼얼함이 녹아든 반전 매력 파스타</li>
+                            <li><b>쿠티크 트러플파스타</b>트러플이 더해진 풍미 진한 크림파스타세계 3대 진미,트러플이 더해진 풍미 진한 크림파스타</li>
+                            <li><b>쿠티크 리얼쯔란치킨</b>#'맵+단+짠' 매력폭발 쯔란시즈닝 #3번 튀겨 더 바삭한 튀김옷 # 부드러운 닭다리살</li>
+                        </ul>
+                        <figure><img src="./imgs/itemb1.jpg" alt=""></figure>
+                        <ul class="item">
+                            <li><a class="on" href="./imgs/itemb1.jpg"><img src="./imgs/item2_ (1).png" alt=""></a></li>
+                            <li><a href="./imgs/itemb2.jpg"><img src="./imgs/item2_ (2).png" alt=""></a></li>
+                            <li><a href="./imgs/itemb3.jpg"><img src="./imgs/item2_ (3).png" alt=""></a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <a href="#" class="arrow prev"><img src="./imgs/Back.png" alt=""></a>
+            <a href="#" class="arrow next"><img src="./imgs/Forward.png" alt=""></a>
+        </div>
+        <div class="vslide-container">
+            <div class="vslide-wrap">
+                <div class="vslide">
+
+                    <img src="./imgs/slide4.webp" alt="">
+                </div>
+                <div class="vslide">
+
+                    <img src="./imgs/slide1.webp" alt="">
+                </div>
+                <div class="vslide">
+
+                    <img src="./imgs/slide3.webp" alt="">
+                </div>
+                <div class="vslide">
+
+                    <img src="./imgs/slide2.webp" alt="">
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        
+        $('a.next').click(function () {
+            $('.hslide-wrap').animate({ 'left': '-200%' }, function () {
+                $('.hslide').first().appendTo('.hslide-wrap')
+                $('.hslide-wrap').css({ 'left': '-100%' })
+            }
+            )
+            $('.vslide-wrap').animate({ 'top': '-200%' }, function () {
+                $('.vslide').first().appendTo('.vslide-wrap')
+                $('.vslide-wrap').css({ 'top': '-100%' })
+            }
+            )
+
+        })
+        $('a.prev').click(function () {
+            $('.hslide-wrap').animate({ 'left': '0' }, function () {
+                $('.hslide').last().prependTo('.hslide-wrap')
+                $('.hslide-wrap').css({ 'left': '-100%' })
+            }
+            )
+            $('.vslide-wrap').animate({ 'top': '0%' }, function () {
+                $('.vslide').last().prependTo('.vslide-wrap')
+                $('.vslide-wrap').css({ 'top': '-100%' })
+            }
+            )
+        })
+        // -------------------------------------------------------------
+        $('.hslide li a').click(function (e) {
+            e.preventDefault()
+            $(this).parent('li').siblings('li').find('a').removeClass('on')
+            $(this).addClass('on')
+            let img = $(this).attr('href')
+            $(this).parents('.hslide').find('figure img').attr('src', img)
+        })
+
+        // ------------------------------------------------------------
+    </script>
+</body>
+
+</html>
