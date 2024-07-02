@@ -1,0 +1,39 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.wrap {
+  max-width: 960px;
+  margin: auto;
+}
+ 
+
+ 
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+
+  color: inherit;
+}
+
+.on {
+  color: #f56513;
+
+  font-weight: bold;
+}
+main h2{  color: #f56513;}
+p {
+  margin: 0;
+
+  background-color: #f2f1f1;
+
+  padding: 16px 24px;
+
+  color: #555555;
+}
+
+ img.map{  max-width: 100%;}
+img.visual {
+width: 100%;
+}
+ul.menu{list-style: none;padding: 0;}
