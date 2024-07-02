@@ -93,13 +93,20 @@ width: 100%;
 height: 100vh;
 background: #fff;
 left: 0;
-top: 100%;
+top: 0;
+opacity: 1;
 transition-duration: .35s;
 transition-timing-function: linear;
+z-index: -1;
 }
+.frame.on{opacity: 1;z-index: 99;}
 .scene{width: 100%;
-height: 100%;}
+height: 100%;
+ 
+transition: .35s;
 
+}
+ 
 a.close{position: absolute;
 z-index: 9999;
 right: 0;

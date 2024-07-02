@@ -143,6 +143,8 @@
         const res = await fetch(url)
         const data = await res.text()
         $('.scene').html(data)
+        $('.frame').addClass('on')
+
       } catch (error) {
         console.error('콘덴츠 로딩 중...오류발생', error)
       }
@@ -151,7 +153,8 @@
     // -------------------------------------
     $('a.close').click(function(e){
       e.preventDefault()
-      $('.frame').animate({'top':'100%'})
+      $('.frame').animate({'top':'0%'})
+      $('.frame').removeClass('on')
       $('body').css({'overflow-y':'hidden'})
     })
   </script>
