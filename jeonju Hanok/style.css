@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    box-sizing: border-box;
+    color: #333;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+}
+
+header img {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 200px;
+}
+
+.headerbg {
+    height: 565px;
+    width: 100%;
+    background-image: url(./headerimg.jpg);
+    background-attachment: fixed
+}
+
+nav {
+    width: 900px;
+}
+
+nav ul {
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+nav ul li a {
+    font-size: 20px;
+}
+
+nav ul li:hover a {
+    color: rgb(25, 71, 36);
+    text-shadow: 3px 3px 10px rgb(7, 5, 1);
+}
+
+
+section:nth-child(1) article:nth-child(1)::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.btn {
+    width: 200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.btn ul a {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    background-color: #5f5f5f;
+    border-radius: 5px;
+    padding: 15px 30px;
+
+
+}
+
+section {
+    width: 100%;
+}
+
+#text1 {
+    display: flex;
+    background-color: #fff;
+    margin: auto;
+    width: 55%;
+    height: 280px;
+    margin-top: 100px;
+}
+
+#text1 .no1 {
+    width: 50%;
+}
+
+#text1 .no1 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #484848;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.5;
+}
+
+#text1 .no1 p {
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+#text1 .no2 {
+    width: 60%;
+}
+
+#text1 .no2 p {
+    color: #666;
+    font-size: 12px;
+    line-height: 2;
+    font-style: normal;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.picture {
+    background: rgb(235, 235, 235);
+    height: 800px;
+}
+
+#text2 {
+    width: 63%;
+    margin: auto;
+    padding: 50px 0;
+    margin-top: 150px;
+}
+
+#text2 h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #666;
+    text-align: center;
+    font-size: 30px;
+}
+
+#text2 p {
+    text-align: center;
+    color: #aaa;
+}
+
+#text2 h3 {
+    color: #666;
+}
+
+.box1,
+.box2 {
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.actions {
+    width: 200px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.actions ul li a {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    background-color: #5f5f5f;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+
+
+section.text3 {
+    color: #000;
+    display: block;
+    padding-top: 150px;
+    width: 63%;
+    margin: auto;
+}
+
+section.text3 h2 {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+    padding-bottom: 50px;
+}
+
+section.text3 h3 {
+    font-style: normal;
+}
+
+.snsWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section.text3 ul {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    padding: 50px 0;
+}
+
+section.text3 ul li {
+    width: 50%;
+    align-self: center;
+}
+
+section.text3 ul li figure {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+section.text3 ul li figure img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+section.text3 ul li p {
+    color: #5f5f5f;
+    font-size: 13px;
+    font-style: normal;
+}
+
+section.text3 ul li h3 {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    color: #000;
+    padding-bottom: 20px;
+}
+
+.bottombg {
+    height: 565px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./bottom2.jpg);
+    background-size: cover;
+    background-attachment: fixed
+}
+
+footer {
+    width: 1200px;
+    margin: auto;
+    height: 200px;
+    text-align: center;
+    padding-top: 80px;
+    color: #484848;
+}

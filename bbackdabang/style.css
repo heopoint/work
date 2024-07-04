@@ -1,0 +1,257 @@
+@import url(/reset.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+/*헤더*/
+header {
+    height: 100px;
+    background-image: url(./images/bg_header_wrap.gif);
+    border-bottom: 2px solid #000;
+}
+
+.inner-wrap {
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*메뉴*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    display: block;
+    height: 60px;
+    background-image: url(./images/bg_gnb.gif);
+    background-repeat: no-repeat;
+    color: transparent;
+    transition: 0.35s;
+}
+
+nav ul li:hover a {
+    background-position-y: -70px;
+}
+
+nav ul {
+    gap: 100px;
+    position: relative;
+    top: 19px;
+}
+
+nav ul li:nth-child(1) a {
+    width: 72px;
+}
+
+nav ul li:nth-child(2) a {
+    width: 72px;
+    background-position-x: -90px;
+}
+
+nav ul li:nth-child(3) a {
+    width: 72px;
+    background-position-x: -180px;
+}
+
+nav ul li:nth-child(4) a {
+    width: 92px;
+    background-position-x: -258px;
+}
+
+.sns img {
+    width: 25px;
+}
+
+/*메인*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+main {
+    width: 712px;
+    height: 892px;
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+main ul {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main ul li {
+    width: 226px;
+    height: 206px;
+}
+
+main ul .two {
+    width: 461px;
+}
+
+main ul li a {
+    display: block;
+    height: 206px;
+    width: 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    transition: 0.35s;
+}
+
+main ul .hei:hover a {
+    background-position-y: -206px;
+}
+
+main ul .wid:hover a {
+    background-position-x: -226px;
+}
+
+main ul li:nth-child(1) a {
+    background-image: url(./images/bg_container_1.gif);
+}
+
+main ul li:nth-child(2) a {
+    background-image: url(./images/bg_container_2.gif);
+}
+
+main ul li:nth-child(3) a {
+    background-image: url(./images/bg_container_3.gif);
+}
+
+main ul li:nth-child(4) a {
+    background-image: url(./images/bg_container_4.gif);
+}
+
+main ul li:nth-child(5) a {
+    background-image: url(./images/bg_container_5.gif);
+}
+
+main ul li:nth-child(6) a {
+    background-image: url(./images/bg_container_6.gif);
+}
+
+main ul li:nth-child(7) a {
+    background-image: url(./images/bg_container_7.gif);
+}
+
+main ul li:nth-child(8) a {
+    background-image: url(./images/bg_container_8.gif);
+}
+
+main ul li:nth-child(9) a {
+    background-image: url(./images/bg_container_9.gif);
+}
+
+main ul li:nth-child(10) a {
+    background-image: url(./images/bg_container_10.gif);
+}
+
+/*Aside*/
+aside {
+    margin-top: 45px;
+}
+
+aside .top {
+    width: 470px;
+    height: 206px;
+    margin-bottom: 20px;
+    border: 3px solid rgb(0, 31, 96);
+    background-color: rgb(0, 31, 96);
+}
+
+aside ul li {
+    color: white;
+    margin: 10px 20px;
+}
+
+aside ul .s1 {
+    font-size: 30px;
+}
+
+aside ul .s2 {
+    font-size: 15px;
+}
+
+.search {
+    border: 3px solid white;
+    width: 270px;
+    margin: 40px 20px 0px;
+    padding: 10px;
+    color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search img {
+    height: 20px;
+}
+
+.search input {
+    border: none;
+    background: transparent;
+}
+
+.search input:focus {
+    outline: none;
+    color: white;
+}
+
+/*Footer*/
+footer {
+    padding: 30px;
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    border-top: 3px solid #FFE800;
+}
+
+footer .wrap {
+    width: 1200px;
+}
+
+footer img {
+    width: 180px;
+}
+
+footer ul {
+    padding-top: 30px;
+}
+
+footer .copyright {
+    margin-top: 32px;
+}
