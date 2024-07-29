@@ -221,7 +221,8 @@ section.text3 ul li {
     width: 50%;
     align-self: center;
 }
-
+section.text3 ul:nth-child(odd) li:nth-child(1) {order: 2;}
+section.text3 ul:nth-child(odd)  li:nth-child(2) {order: 1;}
 section.text3 ul li figure {
     position: relative;
     width: 250px;
