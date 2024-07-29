@@ -1,0 +1,171 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+a{text-decoration:none;color:inherit;}
+li{list-style:none}
+body, html {height: 100vh; overflow-x: hidden;
+background: #000;
+
+}
+.wrap{
+    width: 100%;
+    background: url(./img/bg-header.png) no-repeat;
+    background-position: top;
+    background-size: inherit;
+} 
+
+.content{width: 1200px; height: 100%; margin: auto;}
+header{padding: 50px 0; position: relative;}
+header h1 img{width: 9.8rem;}
+.topTxt{width: 60%; margin: auto; position: relative;}
+.topTxt img{width: 100%;}
+article{display: flex; justify-content: space-between; padding: 100px 0;}
+article .Box{transition: all 0.4s ease-in-out;}
+article .Box:hover {transform: perspective(31.25rem) rotateY(10deg); }
+button.blue2:hover{margin: -5px 0 5px 0; transition: all 0.4s ease-in-out;}
+button.blue2:hover img{display: inline-block; margin-top: 6px;}
+button.org:hover{margin: -5px 0 5px 0; transition: all 0.4s ease-in-out;}
+button.blue:hover{margin: -5px 0 5px 0; transition: all 0.4s ease-in-out;}
+
+.flex{display: flex; justify-content: flex-start; align-items: center;}
+.Box{background: #FFF; position: relative; text-align: center; padding: 30px; letter-spacing: -4px; 
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;}    
+.Box .bar{
+    position: absolute; top:0; left: 50%; transform: translateX(-50%); width: 50%; height: 4px;
+    background: linear-gradient(to right, #209cff, #68e0cf);
+}
+.Box .tit{font-size: 30px;  font-weight: bold; padding: 30px 0;}
+.Box .tit em{color: #32b9cf; font-style: normal; display: block;}
+
+.Box .img img{width: 8.75rem; height: 8.75rem;}
+.tl{text-align: left;}
+button{cursor: pointer; letter-spacing: -2px;}
+button.blue2{width: 100%; font-size: 20px; background:#209cff; color: #FFF; font-weight: bold; padding: 20px; display: block; border:0;}
+button.blue2 img{
+    width: 12px;
+    background-image: url(./img/bg-arr.png) no-repeat;
+    background-position: 93% 50%;
+    display: none;}
+.requestBtn{display: flex; justify-content: space-between;}
+button.blue{width: 49.5%; background:#507fdc; font-size: 20px; color: #FFF; font-weight: bold; padding: 20px; display: block; border:0;}
+button.org{width: 49.5%; background: #ff8518; font-size: 20px; color: #FFF; font-weight: bold; padding: 20px; display: block; border:0;}
+.situation, .homepage{height: 48%;}
+.situation .img img , .homepage .img img{width: 7.5rem; height: 7.5rem;}
+.mb4{margin-bottom: 4%;}
+.pdr20{padding-right: 20px;}
+.guide, .etc{width: 30%;}
+.request{width: 37%;}
+
+footer{padding: 20px 0; background: #383838; margin-top: -33px;}
+.footerInner{width: 1200px; margin: auto;}
+.footerInner ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.footerInner ul li{width: 50%;}
+.call1{color: #b4b4b4; letter-spacing: -2px; font-weight: bold; font-size: 25px;}
+.call1 img , .call2 img{width: 38px; height: 39px;}
+.call1 span{color:#32b9cf; font-size: 28px;}
+.footerInner .call2 ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.call2{color: #b4b4b4; letter-spacing: -1px; text-align: right;}
+.call2 p{font-weight: bold; font-size: 25px; letter-spacing: -2px; padding-bottom: 10px;}
+.call2 p span{color:#e1564e; font-size: 28px;}
+.footerInner ul li:nth-child(3){color: #b4b4b4; font-size: 18px; letter-spacing: -1px;}
+
+.topClude{position: relative;}
+.topClude .clude1{position: absolute; top: 140px; left: 0; animation: clude1Ani1 18s infinite linear; z-index: 0;}
+.topClude .clude2{position: absolute; top: 280px; left: 0; animation: clude1Ani2 24s infinite linear; z-index: 0;}
+.topClude .clude3{position: absolute; top: 520px; right: 0; animation: clude1Ani3 24s infinite linear; z-index: 0;}
+.topClude .virus1{position: absolute; top: 50px; left: 10%; animation: virus1Ani1 2s infinite linear;}
+.topClude .virus2{position: absolute; top: 120px; right: 10%; animation: virus1Ani2 2s infinite linear;}
+@keyframes clude1Ani1{
+    0%{left:0%;}
+    100%{left:100%;}
+}
+
+@keyframes clude1Ani2{
+    0%{left:0%;}
+    100%{left:100%;}
+}
+
+@keyframes clude1Ani3{
+    0%{right:0%;}
+    100%{right:100%;}
+}
+
+@keyframes virus1Ani1{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-20px);}
+    100%{transform: translateY(0);}
+}
+@keyframes virus1Ani2{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-20px);}
+    100%{transform: translateY(0);}
+}
+
+
+@media screen and (max-width:576px){
+    .wrap{background-image: none; background-color: #c0e9fc;}
+    .content{width: 96%;}
+    header h1 img{width: 100px;}
+    article{padding: 30px 0; flex-wrap: wrap;}
+    article .Box:hover {transform: none; }
+    .guide , .request , .etc {width: 100%; margin-bottom: 10px;}
+    .etc{display: flex; justify-content: space-between;}
+    .etc a{width: 48.5%;}
+    .situation, .homepage{width: 100%; height: auto;}
+    .situation .flex ,.homepage .flex{justify-content: center; flex-direction: column;}
+    .situation .img img, .homepage .img img{width: 5rem; height: 5rem;}
+    .Box{padding: 10px;}
+    .Box .tit { font-size: 18px; font-weight: bold; padding: 10px 0;}
+    .flex{flex-wrap: wrap;}
+    .topClude .virus1{left:35px;}
+    .topClude .virus2{top:70px; right: 35px;}
+    .clude1 , .clude2 , .clude3{display: none;}
+    .pdr20{padding: 0;}
+    .footerInner{width: 96%;}
+    .footerInner ul li{width: 100%; padding-bottom: 5px;}
+    .call1{font-size: 14px;}
+    .call1 li:nth-child(1) {font-size: 14px; letter-spacing: -2px; padding-bottom: 5px;}
+    .call1 img , .call2 img{width: 22px; height: 23px;}
+    .call1 span , .call2 p span {font-size: 16px;}
+    .footerInner ul{flex-direction: column;}
+    .call2{text-align: left;}
+    .call2 p{font-size: 14px;}
+    .footerInner ul li:nth-child(3) {font-size: 14px;}
+ }
+
+ @media screen and (min-width:577px) and (max-width:990px) {
+    .wrap{background-image: none; background-color: #c0e9fc;}
+    .content{width: 96%;}
+    header h1 img{width: 100px;}
+    article{flex-wrap: wrap;}
+    article .guide , article .request{width: 48%;}
+    .Box .tit {font-size: 20px;}
+    button.org, button.blue, button.blue2{padding: 15px; font-size: 17px;}
+    .etc{width: 100%; display: flex; flex-direction: column; margin-top: 25px;}
+    
+    .situation, .homepage{width: 100%; height: auto;}
+    .situation .flex ,.homepage .flex{justify-content: center;}
+    .situation .img img, .homepage .img img{width: 5rem; height: 5rem;}
+    .Box .tit em{display: inline-block; padding: 0 15px;}
+    .footerInner{width: 96%;}
+    .footerInner ul li{width: 100%; padding-bottom: 5px;}
+    .call1{font-size: 18px;}
+    .call1 li:nth-child(1) {font-size: 18px; letter-spacing: -2px; padding-bottom: 5px;}
+    .call1 img , .call2 img{width: 22px; height: 23px;}
+    .call1 span , .call2 p span {font-size: 22px;}
+    .footerInner ul{flex-direction: column;}
+    .call2{text-align: left;}
+    .call2 p{font-size: 18px;}
+    .footerInner ul li:nth-child(3) {font-size: 18px;}
+}
+ @media screen and (min-width:991px) and (max-width:1200px) {
+    .content{width: 96%;}
+    .Box{padding: 20px;}
+    .Box .tit{font-size: 20px;}
+    .footerInner{width: 96%;}
+    .etc a{display: block; width: 100%;}
+    .call1{font-size: 18px;}
+    .call1 span{font-size: 24px;}
+    .call1 img , .call2 img{width: 30px; height: 31px;}
+    .call2 p{font-size: 18px;}
+    .call2 p span{font-size: 24px;}
+ }
+ 
