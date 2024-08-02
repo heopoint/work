@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <a href="#" class="bar"><img src="./images/bar.png" alt=""></a>
+
+    <div id="wrap" class="on0">
+        <nav>
+            <h1><img src="./images/logo.jpg" alt=""></h1>
+            <ul class="menu">
+                <li class="on">ON.Now</li>
+                <li>ON.PICK</li>
+                <li>ON.STAGE</li>
+            </ul>
+        </nav>
+        <section>
+            <article id="art1" class="on">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item4">4</div>
+                <div class="item6">6</div>
+                <div class="item3">3</div>
+                <div class="item5">5</div>
+                <div class="item7">7</div>
+                <div class="item8">8</div>
+                <div class="item9">9</div>
+                <div class="item10">10</div>
+                <div class="item11"><video src="./images/main3.mp4" autoplay muted loop></video></div>
+
+            </article>
+            <article id="art2">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item3">3</div>
+                <div class="item4">4</div>
+                <div class="item5">5</div>
+                <div class="item6">6</div>
+                <div class="item7">7</div>
+                <div class="item8"><video src="./images/main3.mp4" autoplay muted loop></video></div>
+                <div class="item9">9</div>
+                <div class="item10">10</div>
+                <div class="item11">11</div>
+                <div class="item12">12</div>
+                <div class="item13">13</div>
+                <div class="item14">14</div>
+            </article>
+            <article id="art3">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item3"><video src="./images/main3.mp4" autoplay muted loop></video></div>
+                <div class="item4">4</div>
+                <div class="item5">5</div>
+                <div class="item6">6</div>
+                <div class="item7">7</div>
+                <div class="item8">8</div>
+                <div class="item9">9</div>
+                <div class="item10">10</div>
+                <div class="item11">11</div>
+
+            </article>
+
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('a.bar').click(function () {
+            $(this).hide()
+            $('nav').addClass('on')
+            $('section').addClass('on')
+        })
+
+        $('nav li').click(function(){
+            $('nav li').removeClass('on')
+            $(this).addClass('on')
+            // -----------------------
+            let i=$(this).index()
+            $('#wrap').removeClass()//
+            $('#wrap').addClass(`on${i}`)//템플릿 문자열
+            // -----------------------
+            $('nav').removeClass('on')//rotateY해제
+            $('section').removeClass('on')//rotateY해제
+             // -----------------------
+            $('article').removeClass('on')//article 하위에 div 다시 원래 자리로 돌려야 반복
+            $('article').eq(i).addClass('on')
+            $('a.bar').show()//메뉴 보여라
+        })
+    </script>
+</body>
+
+</html>

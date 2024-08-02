@@ -1,0 +1,386 @@
+@import url(/reset.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+a.bar{position: fixed;
+z-index: 99;
+background: #fff;
+padding: 3px;
+left: 5px;
+top: 5px;
+animation: btnAni 1s infinite linear alternate;
+}
+@keyframes btnAni{
+    0%{transform: scale(1);
+    background: #fff;
+    }
+    100%{transform: scale(0.8);
+    background: #fdd;
+    }
+
+
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    perspective: 900px;
+}
+
+#wrap.on0 {
+    background: #02957a;
+}
+
+#wrap.on1 {
+    background: #b29bc7;
+}
+
+#wrap.on2 {
+    background: #b0e4b0;
+}
+
+video {
+    width: 100%;
+
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: .35s;
+    transform-origin: right center;
+ overflow: hidden;
+}
+
+section.on {
+    transform: rotateY(-5deg);
+}
+
+/* -------------------------------- */
+article {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+}
+article.on{opacity: 1;z-index: 10;}
+article.on div{  transform: rotateY(0deg);}
+/* -------------------------------- */
+nav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    z-index: 10;
+    background: #000;
+    transform-origin: left center;
+    transition: .35s;
+    transform: rotateY(100deg);
+    opacity: 0;
+}
+nav.on{  transform: rotateY(15deg); opacity: 1;}
+/* -------------------------------- */
+
+nav h1{position: absolute;
+top:10%;
+width: 100%;
+text-align: center;
+
+}
+nav h1 img{width: 90%;
+    border: 1px solid #000;
+}
+nav ul.menu{width: 90%;
+position: absolute;top:50%;
+transform: translateY(-50%);
+color: #eee;
+left: 50%;
+transform: translateX(-50%);
+}
+nav ul.menu li{padding: 10px;
+margin-bottom: 10px;
+text-align: center;
+border: 1px solid #eee;
+cursor: pointer;
+}
+nav ul.menu li.on{background: #eee;
+color: #333;}
+#art1 {
+    background: rgb(104, 104, 101)
+}
+
+#art2 {
+    background: rgb(230, 205, 196)
+}
+
+#art3 {
+    background: rgb(219, 230, 206)
+}
+
+ 
+
+article {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    perspective: 500px;
+}
+
+#art1 .item1 {
+    grid-row: 1/4;
+    grid-column: 1/4;
+}
+
+#art1 .item2 {
+    grid-row: 1/3;
+    grid-column: 4/6;
+}
+
+#art1 .item3 {
+    grid-row: 1/2;
+    grid-column: 6/7;
+}
+
+#art1 .item4 {
+    grid-column: 7/9;
+}
+
+#art1 .item5 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+
+#art1 .item6 {
+    grid-row: 4/5;
+    grid-column: 2/4;
+}
+
+#art1 .item7 {
+    grid-row: 3/5;
+    grid-column: 4/6;
+}
+
+#art1 .item8 {
+    grid-row: 2/5;
+    grid-column: 6/8;
+}
+
+/* ----------------------------------------- */
+
+#art2 .item3 {
+    grid-row: 1/3;
+    grid-column: 3/5;
+}
+
+#art2 .item4 {
+    grid-row: 1/4;
+    grid-column: 5/8;
+}
+
+#art2 .item6 {
+    grid-row: 2/5;
+    grid-column: 1/3;
+}
+
+#art2 .item11 {
+    grid-row: 4/5;
+    grid-column: 3/5;
+}
+
+#art2 .item13 {
+    grid-column: 6/8;
+}
+
+article div {
+    background-size: cover;
+    background-position: center;
+
+    transform: rotateY(180deg);
+    color: yellow;
+  
+    transition: .5s;
+}
+
+#art1 .item1 {
+
+    background-image: url('./images/main1_v3.jpg')
+}
+
+#art1 .item5 {
+    background-image: url('./images/dj_3_genre_9.png')
+}
+
+#art1 .item6 {
+    background-image: url('./images/1603422537922.jpg')
+}
+
+#art1 .item2 {
+    background-image: url('./images/cube_history2.gif')
+}
+
+#art1 .item7 {
+
+    background-image: url('./images/img_playlist10.jpg')
+}
+
+#art1 .item3 {
+    background-image: url('./images/img_playlist14.jpg')
+}
+
+#art1 .item8 {
+
+    background-image: url('./images/bg_now.png')
+}
+
+#art1 .item4 {
+
+    background-image: url('./images/1603183080556.jpg')
+}
+
+#art1 .item9 {
+    background-image: url('./images/dj_3_genre_27_EDM.png')
+}
+
+#art1 .item10 {
+    background-image: url('./images/img_playlist12.jpg')
+}
+
+#art1 div:nth-child(11) {
+    background: #000;
+}
+
+/* ----------------------------------------------- */
+#art2 .item1 {
+    background-image: url('./images/img_playlist9.jpg')
+}
+
+#art2 .item2 {
+    background-image: url('./images/dj_3_genre_12.png')
+}
+
+#art2 .item3 {
+
+    background-image: url('./images/img_playlist8.jpg ')
+}
+
+#art2 .item4 {
+
+    background-image: url('./images/main2_v3.jpg')
+}
+
+#art2 .item5 {
+    background-image: url('./images/dj_3_genre_28_TECHNO.png')
+}
+
+#art2 .item6 {
+
+    background-image: url('./images/bg_now3.png')
+}
+
+
+#art2 .item7 {
+    background-image: url('./images/img_playlist8.jpg')
+}
+
+
+#art2 .item9 {
+    background-image: url('./images/dj_3_genre_2.png ')
+}
+
+#art2 .item11 {
+
+    background-image: url('./images/1603872614341.jpg')
+}
+
+
+
+#art2 .item12 {
+    background-image: url('./images/dj_3_genre_14.png ')
+}
+
+#art2 .item13 {
+
+    background-image: url('./images/1602487206809.jpg')
+}
+
+
+
+#art2 .item10 {
+    background-image: url('./images/cube_play2.gif')
+}
+
+#art2 .item14 {
+    background-image: url('./images/dj_3_genre_3.png')
+}
+
+/* -------------------------------------- */
+
+#art3 .item1 {
+    background-image: url('./images/dj_3_genre_10.png ')
+}
+
+#art3 .item2 {
+    background-image: url('./images/main3.jpg ');
+    grid-row: 1/4;
+    grid-column: 2/5
+}
+
+#art3 .item3 {
+    background: #000;
+    grid-row: 1/3;
+    grid-column: 5/7
+}
+
+#art3 .item4 {
+    grid-column: 7/9;
+    background-image: url('./images/1602491818009.jpg ')
+}
+
+#art3 .item5 {
+    background-image: url('./images/img_playlist19.jpg ')
+}
+
+
+#art3 .item6 {
+    grid-column: 7/9;
+    grid-row: 2/5;
+    background-image: url('./images/bg_now2.png ')
+}
+
+#art3 .item7 {
+    background-image: url('./images/dj_3_genre_22.png ')
+}
+
+#art3 .item8 {
+
+    background-image: url('./images/img_playlist24.jpg ');
+    background-size: contain;
+    grid-column: 5/7;
+    grid-row: 3/5;
+}
+
+#art3 .item9 {
+    background-image: url('./images/cube_play2.gif ')
+}
+
+#art3 .item10 {
+    grid-column: 2/4;
+    background-image: url('./images/1602487222381.jpg ')
+}
+
+#art3 .item11 {
+    background-image: url('/images/dj_3_genre_18.png')
+}
