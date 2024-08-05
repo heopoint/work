@@ -1,0 +1,340 @@
+html,
+body,
+section {
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    perspective: 900px;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background: #003399;
+    z-index: 99;
+    padding: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFCC00;
+    margin: 6px 0;
+    transition: 0.4s;
+    
+}
+ 
+.bar1.on{transform: translate(0, 11px) rotate(-45deg);}
+.bar2.on{opacity: 0;}
+.bar3.on{  transform: translate(0, -11px) rotate(45deg);}
+
+.item h2 {
+    color: #fff;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.item h3 {
+    color: #fff;
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.item p {
+    color: #efefef;
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+.item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem
+}
+
+header {
+    background: #003399;
+    color: #fff;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    transform-origin: left center;
+    transform: rotateY(100deg);
+    transition: .35s;
+    opacity: 0;
+}
+
+header.on {
+    transform: rotateY(15deg);
+    opacity: 1;
+}
+
+header ul.menu {
+    position: absolute;
+    width: 90%;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header ul.menu li {
+    margin: 10px;
+}
+
+header ul.menu li a {
+    display: block;
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+
+// 메뉴 활성화 버튼
+header ul.menu li.on a {
+    background: #FFCC00;
+    color: #003399;
+    font-weight: bold;
+}
+
+h1 {
+    padding: 50px 0;
+}
+
+h1 img {
+    width: 8cqw;
+}
+
+p.intro {
+    font-size: 20px;
+    padding: 10px;
+    line-height: 2;
+}
+
+
+article {
+    gap: 12px
+}
+
+.art1 {
+    background: #FFEBEE;
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: repeat(5, 1fr);
+    /* 행값 */
+    grid-template-rows: repeat(5, 1fr);
+
+
+
+    .item1 {
+        grid-column: 1/3;
+        grid-row: 1/ 2;
+        background: #E91E63;
+    }
+
+    .item2 {
+        grid-column: 3/5;
+        grid-row: 1/ 4;
+        background-image: url('./images/item1-1.jpg')
+    }
+
+    .item3 {
+        grid-column: 5/6;
+        grid-row: 1/ 3;
+        background: #EC407A;
+
+    }
+
+    .item4 {
+        grid-column: 1/3;
+        grid-row: 2/ 5;
+        background-image: url('./images/item1-2.jpg')
+    }
+
+    .item5 {
+        grid-column: 5/6;
+        grid-row: 3/ 4;
+        background-image: url('./images/item1-3.jpg')
+    }
+
+    .item6 {
+        grid-column: 3/4;
+        grid-row: 4/ 5;
+        background: #FF4081;
+    }
+
+    .item7 {
+        grid-column: 4/5;
+        grid-row: 4/ 6;
+        background-image: url('./images/item1-4.jpg')
+    }
+
+    .item8 {
+        grid-column: 5/6;
+        grid-row: 4/ 6;
+        background-image: url('./images/item1-5.jpg')
+    }
+
+    .item9 {
+        grid-column: 1/3;
+        grid-row: 5/ 6;
+        background: #FF80AB;
+    }
+
+    .item10 {
+        grid-column: 3/4;
+        grid-row: 5/ 6;
+        background-image: url('./images/item1-6.jpg')
+    }
+}
+
+.art2 {
+
+    display: grid;
+    height: 100%;
+    background: #E8F5E9;
+    grid-template-columns: repeat(7, 1fr);
+    /* 행값 */
+    grid-template-rows: repeat(4, 1fr);
+
+
+
+    .item1 {
+        grid-column: 1/4;
+        grid-row: 1/ 2;
+        background: #388E3C;
+
+    }
+
+    .item2 {
+        grid-column: 4/7;
+        grid-row: 1/ 3;
+        background-image: url('./images/item2-1.png')
+    }
+
+    .item3 {
+        grid-column: 7/8;
+        grid-row: 1/ 3;
+        background: #2E7D32;
+
+    }
+
+    .item4 {
+        grid-column: 1/4;
+        grid-row: 2/ 4;
+        background-image: url('./images/item2-2.png')
+    }
+
+    .item5 {
+        grid-column: 4/5;
+        grid-row: 3/ 5;
+        background: #81C784;
+    }
+
+    .item6 {
+        grid-column: 5/8;
+        grid-row: 3/ 5;
+        background-image: url('./images/item2-3.png')
+    }
+
+    .item7 {
+        grid-column: 1/4;
+        grid-row: 4/ 5;
+        background: #4CAF50;
+
+    }
+
+}
+
+.art3 {
+ 
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: repeat(7, 1fr);
+    /* 행값 */
+    grid-template-rows: repeat(5, 1fr);
+    background: #E1F5FE;
+
+
+
+    .item1 {
+        grid-column: 1/3;
+        grid-row: 1/ 3;
+
+        background: #01579B;
+
+    }
+
+    .item2 {
+        grid-column: 3/5;
+        grid-row: 1/ 4;
+        background-image: url('./images/item3-1.png')
+    }
+
+    .item3 {
+        grid-column: 5/8;
+        grid-row: 1/ 2;
+        background: #0277BD;
+    }
+
+    .item4 {
+        grid-column: 5/8;
+        grid-row: 2/ 4;
+        background-image: url('./images/item3-2.png')
+    }
+
+    .item5 {
+        grid-column: 1/3;
+        grid-row: 3/ 5;
+        background-image: url('./images/item3-3.png')
+    }
+
+    .item6 {
+        grid-column: 3/5;
+        grid-row: 4/ 5;
+        background: #039BE5;
+
+    }
+
+    .item7 {
+        grid-column: 5/6;
+        grid-row: 4/ 6;
+        background: #40C4FF;
+    }
+
+    .item8 {
+        grid-column: 6/8;
+        grid-row: 4/ 6;
+        background-image: url('./images/item3-4.png')
+    }
+
+    .item9 {
+        grid-column: 1/3;
+        grid-row: 5/ 6;
+        background: #1E88E5;
+    }
+
+    .item10 {
+        grid-column: 3/4;
+        grid-row: 5/ 6;
+        background-image: url('./images/item3-5.png')
+    }
+
+    .item11 {
+        grid-column: 4/5;
+        grid-row: 5/ 6;
+        background-image: url('./images/item3-6.png')
+    }
+
+}
