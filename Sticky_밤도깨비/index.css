@@ -1,0 +1,382 @@
+@import "/reset.css";
+@font-face {
+  font-family: free;
+  src: url(./font/free-fa-solid-900.woff2);
+}
+@font-face {
+  font-family: Download;
+  src: url(./font/다운로드.woff);
+}
+@font-face {
+  font-family: NanumB;
+  src: url(./font/NanumSquareB.woff2);
+}
+@font-face {
+  font-family: NanumR;
+  src: url(./font/NanumSquareR.woff2);
+}
+img {
+  vertical-align: top;
+}
+
+header {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+header .inner {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1 img {
+  height: 29px;
+}
+
+ul.menu li img {
+  height: 15px;
+}
+
+ul.sns li img {
+  height: 23px;
+}
+
+
+#sect1 ul.banner {
+  display: flex;
+}
+#sect1 ul.banner img {
+  width: 200px;
+}
+
+section:nth-of-type(n + 2) .inner figure {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  text-align: center;
+}
+section:nth-of-type(n + 2) .inner article {
+flex: 1;
+  border: 1px solid #000;
+
+}
+section:nth-of-type(n + 2) .inner article img{width: 100%;}
+#sect2 article {
+  background-color: #141e3c;
+  color: #ccc;
+  font-weight: 300;
+}
+#sect2 article p {
+  color: #ccc;
+}
+ 
+#sect2 article h3 {
+  color: #fadd01;
+}
+
+#sect3 article {
+  background-color: #ffe7d3;
+}
+
+#sect4 article {
+  background-color: #fffbdf;
+}
+
+#sect5 article {
+  background-color: #e3d5ff;
+}
+
+#sect6 article {
+  background-color: #ffdeed;
+}
+
+#sect7 article {
+  background-color: #eaedc8;
+}
+section .inner article {
+  text-align: center;
+  height: auto;
+}
+section .inner article h4.at {
+  padding-top: 50px;
+}
+section .inner article h4 b.title {
+  color: #ff7800;
+  font-weight: bold;
+  line-height: 3;
+}
+section .inner article img {
+  width: 100%;
+}
+section .inner article p {
+  line-height: 1.5;
+  margin-bottom: 50px;
+  color: #333;
+}
+#sect8 article {
+  background-color: #d7ffef;
+}
+ footer .row1 {
+  height: 26%;
+  background-color: #1e2c5a;
+  padding: 0 2%;
+  font-size: 12px;
+  color: white;
+  display: flex;
+}
+ footer .row1 img {
+  width: 24px;
+}
+ footer .row1 > div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4%;
+  align-items: center;
+  padding: 20px 0;
+}
+ footer .row1 > div span {
+  color: #ffe100;
+}
+ footer .row2 {
+  padding: 1%;
+  height: 74%;
+  background-color: #575757;
+  display: flex;
+  justify-content: space-around;
+}
+ footer .row2 ul.app li {
+  display: inline;
+}
+ footer .row2 ul.app li img {
+  width: 150px;
+}
+ footer .row2 ul.sns {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  gap: 10px;
+  margin-top: 20px;
+  padding-bottom: 14px;
+}
+ footer .row2 ul.sns li {
+  width: 24px;
+}
+ footer .row2 ul.sns li img {
+  width: 100%;
+}
+ footer .row2 .info {
+  font-size: 10px;
+  color: #fff;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+ footer .row2 .seoulLogo img {
+  width: 103px;
+}
+a.top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: 0.35s;
+}
+
+section .inner article {
+  text-align: center;
+  font-family: NanumR;
+}
+section .inner article em {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1vw;
+  padding: 20px;
+}
+section .inner article i {
+  font-style: normal;
+}
+section .inner article h2 {
+  padding-bottom: 50px;
+}
+ 
+
+ 
+section#sect2 article {
+  background-color: rgb(30, 44, 90);
+}
+section#sect2 article h2 {
+  color: #ffe100;
+}
+section#sect2 article p {
+  color: white;
+}
+  section#sect3 article {
+  background-color: #ffe7d3;
+}
+  section#sect3 article i {
+  color: #ee781f;
+}
+section#sect4 article {
+  background-color: #fffbdf;
+}
+section#sect5 article {
+  background-color: #e3d5ff;
+}
+section#sect6 article {
+  background-color: #ffdeed;
+}
+section#sect7 article {
+  background-color: #eaedc8;
+}
+ 
+section#sect8 article {
+  background-color: #d7ffef;
+}
+ 
+@media only screen and (max-width: 768px) {
+  header .inner {
+    justify-content: center;
+  }
+  header .inner ul.menu {
+    display: none;
+  }
+  header .inner ul.sns {
+    display: none;
+  }
+  #sect1 ul.banner {
+    flex-wrap: wrap;
+  }
+  #sect1 ul.banner.banner li {
+    width: 33.333%;
+  }
+  #sect1 ul.banner.banner img {
+    width: 100%;
+  }
+  h2.m_tit img {
+    height: 60px;
+  }
+  h2.pc_tit {
+    display: none;
+  }
+  footer .row1 {
+    flex-direction: column;
+  }
+  footer .row1 div {
+    border-bottom: 1px solid #aaa;
+    width: 100%;
+    height: 50%;
+  }
+  footer .row2 {
+    text-align: center;
+    flex-direction: column;
+  }
+  footer .row2 .sns {
+    display: flex;
+  }
+  footer .row2 .info {
+    margin-top: -1px;
+  }
+  footer .row2 .seoulLogo {
+    padding-top: 24px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  header .inner {
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+  }
+  header .inner ul.menu {
+    display: flex;
+    gap: 2rem;
+  }
+  header .inner ul.sns {
+    display: flex;
+    gap: 1rem;
+  }
+  #sect1 h2.m_tit {
+    display: none;
+  }
+  #sect1 ul.banner {
+    justify-content: center;
+  }
+  #sect1 ul.banner li:nth-child(1) {
+    background: #ff7800;
+    flex: 1;
+    text-align: right;
+  }
+  #sect1 ul.banner li:nth-child(6) {
+    background: #00341f;
+    flex: 1;
+  }
+  h2.m_tit {
+    display: none;
+  }
+  section:nth-of-type(n + 2) .inner {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    align-items: flex-start;
+  }
+  section:nth-of-type(n + 2) .inner figure {
+    width: 400px;
+  }
+  section:nth-of-type(n + 2) .inner figure h2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+  }
+  section:nth-child(even) figure {
+    order: 2;
+  }
+  section:nth-child(even) article {
+    order: 1;
+  }
+  section:nth-of-type(n + 2) .inner article h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 50px 0;
+  }
+  section:nth-of-type(n + 2) .inner article p {
+    font-size: 14px;
+  }
+  
+  footer .row1 {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .row1 > div {
+    width: 50%;
+  }
+  footer .row2 {
+    border: 1px solid #000;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer .row2 .info {
+    order: 1;
+  }
+  footer .row2 .app {
+    order: 2;
+    padding-left: 150px;
+  }
+  footer .row2 .seoulLogo {
+    order: 3;
+    padding-left: 30px;
+  }
+}
+
+h6{position:fixed;
+left:10px;
+top:100px;
+font-size:100px;
+z-index: 99;
+color: #ee781f;
+}
+

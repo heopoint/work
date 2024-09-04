@@ -1,0 +1,264 @@
+@mixin background-style {
+    background-image: url(./images/ornament.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* 기본 스타일 초기화 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* Body 기본 스타일 */
+body {
+    width: 100%;
+    font-family: 'PT Serif', serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.just-sb {
+    justify-content: space-between;
+}
+
+.wrap {
+    margin: 3%;
+
+    justify-content: space-between;
+
+}
+
+article img {
+    width: 100%;
+}
+
+footer {
+    padding-top: 50px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+   
+}
+
+footer::after {
+ 
+    @include background-style;
+    background-position: center top; // 위치 지정
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    height: 40px;   
+}
+
+article li {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.7em;
+    line-height: 1.5em;
+    margin: 0.5em 0 0 0;
+}
+
+figcaption span {
+    font-weight: bolder;
+    font-size: initial;
+    letter-spacing: 0.15em;
+}
+nav{
+  padding-top:30px; 
+    @include background-style;
+    background-position: left top; // 위치 지정
+}
+nav li {
+    height: 80px;
+    font-size: 0.7em;
+    text-align: center;
+ 
+    @include background-style;
+     background-position: left bottom; // 위치 지정
+}
+
+nav li:hover {
+
+    @include background-style;
+    background-position: center bottom; // 위치 지정
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: red;
+}
+
+span {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        order: 1;
+
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        gap: 24px;
+    }
+
+    nav ul li {
+        flex: 1;
+
+    }
+
+    h1 {
+        order: 2;
+
+    }
+
+    article ul li {
+        width: 48%;
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) {
+    article ul li {
+        width: 31%;
+    }
+
+    main {
+        width: 66%;
+
+    }
+
+    header {
+        width: 32%;
+
+    }
+
+    nav ul a li span {
+        font-weight: bolder;
+        font-size: initial;
+        letter-spacing: 0.15em;
+    }
+
+    article ul li {
+
+        width: 32%;
+    }
+
+    nav {
+        width: 60%;
+        margin: auto;
+
+    }
+
+    #logo {
+
+        background-image: url(./images/logo-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        height: 311px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (min-width: 1300px) {
+    .wrap {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+
+    }
+
+    h1 {
+        width: 32%;
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 66%;
+
+
+    }
+
+    nav ul {
+        display: flex;
+        gap: 24px;
+    }
+
+    nav ul li {
+        flex: 1
+    }
+
+    article ul li {
+
+        width: 16%;
+    }
+
+    main {
+        width: 66%;
+        float: right;
+
+    }
+
+    footer {
+        width: 40%;
+        margin: auto;
+
+
+    }
+
+
+}

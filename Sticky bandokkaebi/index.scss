@@ -1,0 +1,158 @@
+@import "./reset.css";
+img {
+  vertical-align: top;
+}
+ 
+header {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  .inner{
+   display: flex;
+   height: 60px;
+   align-items: center;
+  }
+ 
+ }
+img {
+  vertical-align: top;
+}
+h1 img {
+  height: 29px;
+}
+ul.menu li img {
+  height: 15px;
+}
+ul.sns li img {
+  height: 23px;
+}
+
+header img {
+  padding-top: 10px;
+}
+#sect1{
+  ul.banner {
+    display: flex;
+    img{width: 200px;}
+  }
+ 
+}
+section {
+  &:nth-of-type(n + 2) {
+    .inner {
+     figure{position: sticky;top:60px;
+    text-align: center;}
+      article {
+        width: 800px;
+        border: 1px solid #000;
+        height: 1000px;
+      }
+    }
+  }
+ 
+}
+@media only screen and (max-width: 768px) {
+  header {
+   .inner{
+  
+    justify-content: center;
+    ul.menu {
+      display: none;
+    }
+    ul.sns {
+      display: none;
+    }
+   }
+  
+  
+  }
+ 
+ #sect1{
+  ul.banner {
+    flex-wrap: wrap;
+
+    &.banner li {
+      width: 33.333%;
+    }
+    &.banner img {
+      width: 100%;
+    }
+  }
+ }
+ 
+  h2.m_tit img {
+    height: 60px;
+  }
+  h2.pc_tit {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+  header .inner {
+    width: 1200px;
+    margin: auto;
+ 
+    justify-content: space-between;
+
+    ul.menu {
+      display: flex;
+      gap: 2rem;
+    }
+    ul.sns {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  #sect1 {
+    h2.m_tit {
+      display: none;
+    }
+    ul.banner {
+      justify-content: center;
+      li {
+        &:nth-child(1) {
+          background: #ff7800;
+          flex: 1;
+          text-align: right;
+        }
+        &:nth-child(6) {
+          background: #00341f;
+          flex: 1;
+
+        }
+       
+      }
+    }
+  }
+  h2.m_tit {
+    display: none;
+  }
+  section {
+    &:nth-of-type(n + 2) {
+      .inner {
+        width: 1200px;
+        display: flex;
+        margin: auto;
+        align-items: flex-start;
+        figure {
+          width: 400px;
+       h2{position: sticky;top:60px}
+        }
+       
+      }
+    }
+  
+    &:nth-child(even) figure {
+      order: 2;
+    }
+    &:nth-child(even) article {
+      order: 1;
+    }
+  }
+}
+a.top{position: fixed;
+bottom: 10px;right:10px;
+opacity: 0;
+transition: .35s;
+}

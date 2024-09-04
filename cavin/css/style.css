@@ -1,0 +1,153 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+/*  Reset CSS  */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
+{ margin:0;  padding:0;}
+table {border-collapse:collapse; border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; }
+ol,ul {list-style: none; }
+caption,th { text-align:left;}
+h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight:normal;}
+q:before,q:after {content:"";}
+abbr, acronym {border:0;}
+a{outline:0;   text-decoration:none; color:#666;}
+em { font-style:normal; }
+body { font: 14px /1.4  'Poiret One'; color:#999; min-width:900px; background:#262626;}
+
+
+
+/* header */
+.header { position:fixed; width:470px; height:100%; left:0px; top:0px; background:#1a1a1a;}
+.header h1 { position:absolute; right:20px; top:40%;}
+.filter { position:absolute; right:20px; top:55%;}
+.filter li { float:left;}
+.filter li a { display:block; height:33px; background-position:0px 0px; text-indent:-9999px; transition:all 0.5s; }
+.filter li a:hover { background-position:0px -33px;}
+.filter li a.on { background-position:0px -33px;}
+.filter li a.menu1 { background-image:url(../img/menu1.png); width:79px;}
+.filter li a.menu2 { background-image:url(../img/menu3.png); width:81px;}
+.filter li a.menu3{ background-image:url(../img/menu2.png); width:61px;}
+.filter li a.menu4 { background-image:url(../img/menu4.png); width:77px;}
+
+/* right contents */
+.wrap { margin-left:490px; margin-top:60px;}
+.item { width:320px; height:200px; float:left; padding:8px; box-sizing:border-box;}
+.item>div {  background:#3b3b3b; width:100%; height:100%; text-align:right; box-sizing:border-box; padding:20px; }
+.item>div h2 { font-weight:bold; font-size:18px; color:#eee; letter-spacing:2px;}
+.item>div span { font-weight:bold; font-size:14px; color:#bbb; }
+.item>div p { margin-top:50px;}
+
+/*박스의 크기*/
+.item:nth-child(1) { width:640px; height:400px;}
+.item:nth-child(2) { height:400px; }
+.item:nth-child(5) { width:640px; }
+.item:nth-child(9) { width:640px;}
+.item:nth-child(12) { width:640px; height:400px; }
+.item:nth-child(17) { width:640px; height:400px;}
+.item:nth-child(30) { width:640px; height:200px;}
+
+
+/*박스 컨텐츠의 배경 설정*/
+.item:nth-child(1)>div { background:url(../img/box1.jpg) no-repeat 0px 0px;}
+.item:nth-child(3)>div {background:url(../img/box3.jpg) no-repeat 0px 0px;}
+.item:nth-child(4)>div { background:#262626 url(../img/box4.png) no-repeat 0px 0px;}
+.item:nth-child(5)>div { background:#262626;}
+.item:nth-child(6)>div { background:url(../img/box6.jpg) no-repeat 0px 0px;}
+.item:nth-child(7)>div { background:url(../img/box7.jpg) no-repeat 0px 0px;}
+.item:nth-child(8)>div { background:#3b3b3b url(../img/box8.png) no-repeat 0px 0px;}
+.item:nth-child(9)>div { background:url(../img/box9.jpg) no-repeat 0px 0px;}
+.item:nth-child(11)>div { background:url(../img/box11.jpg) no-repeat 0px 0px;}
+.item:nth-child(12)>div { background:url(../img/box12.jpg) no-repeat 0px 0px;}
+.item:nth-child(13)>div { background:url(../img/box13.jpg) no-repeat 0px 0px;}
+.item:nth-child(14)>div { background:url(../img/box14.jpg) no-repeat 0px 0px;}
+.item:nth-child(15)>div { background:#262626;}
+.item:nth-child(16)>div { background:#262626;}
+.item:nth-child(17)>div { background:url(../img/box17.jpg) no-repeat 0px 0px;}
+.item:nth-child(18)>div { background:url(../img/box18.jpg) no-repeat 0px 0px;}
+.item:nth-child(20)>div { background:url(../img/box20.jpg) no-repeat 0px 0px;}
+.item:nth-child(22)>div { background:#262626;}
+.item:nth-child(23)>div { background:#262626;}
+.item:nth-child(24)>div { background:#262626;}
+.item:nth-child(26)>div { background:#262626;}
+.item:nth-child(27)>div { background:url(../img/box27.jpg) no-repeat 0px 0px;}
+.item:nth-child(28)>div { background:url(../img/box28.jpg) no-repeat 0px 0px;}
+.item:nth-child(30)>div { background:url(../img/box30.jpg) no-repeat 0px 0px;}
+
+
+/*사진박스 호버효과*/
+.photo1>div { background-position:0px 0px;}
+.photo1>div:hover { background-position:0px -200px;}
+.photo2>div { background-position:0px 0px;}
+.photo2>div:hover { background-position:0px -400px;}
+
+/*텍스트박스 호버효과*/
+.txt>div { transition:all 0.5s;}
+.txt>div:hover { background-color:#dd5417!important;}
+.txt>div:hover p { color:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*isotope css*/
+iframe { position:absolute; z-index:40; }
+.full-frame { position:absolute; z-index:40;}
+.isotope-item { z-index: 2;}
+.isotope-hidden.isotope-item { pointer-events: none;  z-index: 1;}
+.isotope, .isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+    -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+   -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
