@@ -1,0 +1,22 @@
+@font-face {
+    font-family: mon-ext;
+    src: url(./Montserrat-ExtraLight.woff);
+  }
+@font-face {
+    font-family: noto-ligt;
+    src: url(./NotoSans-Light.woff);
+  }
+@font-face {
+    font-family: noto-reg;
+    src: url(./NotoSans-Regular.woff);
+  }
+ 
+@font-face {
+    font-family: noto-thin;
+    src: url(./NotoSans-Thin.woff);
+  }
+@font-face {
+    font-family: noto-med;
+    src: url(./NotoSans-Medium.woff);
+  }
+ 
