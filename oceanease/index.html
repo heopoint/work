@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>롯데호텔</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="./img/logo.svg" alt=""></h1>
+    </header>
+    <section >
+     
+      
+       
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/i.jpg">
+                <em>Superyacht</em>
+                Amalfi Coast, Italy
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">이탈리아 아말피 해안</h4>
+                <p class="stxt">
+                  아말피 해안은 나폴리 만에서 소렌티노 반도까지 이어진
+                  해안선입니다.
+                </p>
+                <button><a href="./Italy.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/f.jpg">
+                <em>Superyacht</em>
+                The French Riviera
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">프랑스 리비에라</h4>
+                <p class="stxt">
+                  최고의 지중해 요트 여행지로 유명한 프랑스 리비에라는 전 세계
+                  요트 마니아들로부터 가장 큰 사랑을 받고 있습니다.
+                </p>
+                <button><a href="./French.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/g.jpg">
+                <em>Superyacht</em>
+                Greece
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">그리스</h4>
+                <p class="stxt">
+                  신화와 전설의 땅으로 알려진 그리스는
+                </p>
+           
+                <button><a href="./Greece.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/c.jpg">
+                <em>Superyacht</em>
+                The Caribbean Sea
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">카리브해</h4>
+                <p class="stxt">
+                  이국적인 카리브해에서 진정한 여유를 경험하세요.
+                </p>
+             
+                <button><a href="./Caribbean.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+     
+     
+    </section>
+    <div class="frame">
+
+      <div class="scene"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      const section = document.querySelector('section')
+      const articleElems = document.querySelectorAll('article')
+      articleElems.forEach((art) => {
+        art.addEventListener('mouseenter', function () {
+          art.classList.add('on')
+          let fullBg = art.querySelector('h3').dataset.bg
+          section.style.backgroundImage = `url(${fullBg})`
+        })
+        art.addEventListener('mouseleave', function () {
+          art.classList.remove('on')
+        })
+      })
+
+      $('button a').click(function (e) {
+        e.preventDefault()
+        let href = $(this).attr('href')
+        $('.frame').animate({ top: 0 })
+        $('.scene').load(href)
+        $('body').css({ 'overflow-y': 'auto' })
+      })
+
+      $(window).on('scroll', function() {
+   
+        if ($(window).scrollTop() === 0) {
+   
+          $('.frame').animate({ top: '100%' });
+       
+          $('body').css({ 'overflow-y': 'hidden' });
+        }
+      });
+    </script>
+  </body>
+</html>
