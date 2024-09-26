@@ -1,13 +1,27 @@
 @import url(./reset.css);
 .flex{display: flex;}
-ul.work{max-width: 1200px;margin: auto;}
-ul.work li{display: flex;gap:1.5rem;
+.container{flex-direction: column;
+ padding: 100px;
+  height: 100vh;display: flex;
+margin: auto;width: 1200px; 
+}
+ul.work{
+display: flex;flex-wrap: wrap;
+ 
+padding: 20px;
+border-top: 1px solid #6fd0e3;
+border-bottom: 1px solid #eee;
+}
+ul.work li{
+  width: 33.333%;
+  display: flex;gap:1.5rem;
  }
 span.date{
   display: block;
   font-size: 23px;
   padding-top: 6px;}
 h3{font-size: 32px;margin-bottom: 10px;
-color: royalblue;font-weight: normal;}
+color: rgb(101, 106, 118);font-weight: normal;}
 p.desc{font-size: 16px;}
-ul.work li:hover h3{ color:#d13f00}
+ul.work li:hover h3{ color:rgb(253, 81, 8)}
+ul.work li:hover p.desc{ color:rgb(4, 183, 248)}
