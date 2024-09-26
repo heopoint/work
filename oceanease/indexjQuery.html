@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>롯데호텔</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="./img/logo.svg" alt=""></h1>
+    </header>
+    <section >
+     
+      
+       
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/i.jpg">
+                <em>Superyacht</em>
+                Amalfi Coast, Italy
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">이탈리아 아말피 해안</h4>
+                <p class="stxt">
+                  아말피 해안은 나폴리 만에서 소렌티노 반도까지 이어진
+                  해안선입니다.
+                </p>
+                <button><a href="./Italy.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/f.jpg">
+                <em>Superyacht</em>
+                The French Riviera
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">프랑스 리비에라</h4>
+                <p class="stxt">
+                  최고의 지중해 요트 여행지로 유명한 프랑스 리비에라는 전 세계
+                  요트 마니아들로부터 가장 큰 사랑을 받고 있습니다.
+                </p>
+                <button><a href="./French.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/g.jpg">
+                <em>Superyacht</em>
+                Greece
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">그리스</h4>
+                <p class="stxt">
+                  신화와 전설의 땅으로 알려진 그리스는
+                </p>
+           
+                <button><a href="./Greece.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="summary">
+              <h3 data-bg="./img/c.jpg">
+                <em>Superyacht</em>
+                The Caribbean Sea
+              </h3>
+              <div class="article-desc">
+                <h4 class="fs38">카리브해</h4>
+                <p class="stxt">
+                  이국적인 카리브해에서 진정한 여유를 경험하세요.
+                </p>
+             
+                <button><a href="./Caribbean.html">MORE</a></button>
+              </div>
+            </div>
+          </article>
+     
+     
+    </section>
+    <div class="frame">
+
+      <div class="scene"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+$(document).ready(function () {
+  const section = $('section');
+  const articleElems = $('article');
+  let isFrameOpen = false; // 프레임이 열려 있는지 여부를 추적하는 변수
+
+  // Hover 시 배경 이미지 변경 및 splitTxt 함수 적용
+  articleElems.each(function () {
+    const art = $(this);
+    const h4 = art.find('h4').get(0); // h4 요소 가져오기 (DOM 객체)
+
+    // splitTxt가 이미 적용된 경우 중복 호출 방지
+    if (!art.hasClass('split-applied')) {
+      splitTxt(h4); // splitTxt 함수를 호출하여 글자를 쪼갠다
+      art.addClass('split-applied'); // 한 번만 적용되도록 클래스 추가
+    }
+
+    art.on('mouseenter', function () {
+      art.addClass('on');
+      let fullBg = art.find('h3').data('bg');
+      section.css('background-image', `url(${fullBg})`);
+    });
+
+    art.on('mouseleave', function () {
+      art.removeClass('on');
+    });
+  });
+
+  // 버튼 클릭 시 창 열기
+  $('button a').click(function (e) {
+    e.preventDefault();
+    
+    if (!isFrameOpen) { // 프레임이 닫혀 있을 때만 실행
+      let href = $(this).attr('href');
+      isFrameOpen = true; // 프레임이 열렸음을 표시
+      $('.frame').animate({ top: 0 }); // 프레임 열기 애니메이션
+      $('.scene').load(href); // href에서 콘텐츠를 불러오기
+      $('body').css({ 'overflow-y': 'auto' });
+    }
+  });
+
+  // 스크롤이 맨 위에 도달하면 창 닫기
+  $(window).on('scroll', function () {
+    if (isFrameOpen && $(window).scrollTop() === 0) {
+      // 프레임이 열려 있을 때만 닫기 애니메이션 실행
+      $('.frame').animate({ top: '100%' }, function () {
+        isFrameOpen = false; // 프레임이 닫혔음을 표시
+      });
+      $('body').css({ 'overflow-y': 'hidden' });
+    }
+  });
+});
+
+// 글자를 각각 span 태그로 감싸는 함수
+function splitTxt(el) {
+  const txt = el.innerText; // h4 태그의 텍스트
+  let tags = '';
+  let num = 0;
+  for (const char of txt) {
+    tags += `<span style='transition-delay:${0.1 * num++}s'>${char}</span>`;
+  }
+  el.innerHTML = tags; // 각 글자를 span으로 감싸서 다시 h4 태그에 넣음
+}
+</script>
+    </script>
+  </body>
+</html>
