@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex">
+            <h1><img src="./header-logo.png" alt="logo"></h1>
+            <div class="left-gnb gnb">
+                <ul class="left-menu flex">
+                    <li class="main-menu">
+                        <a href="#">
+                            <span class="on">BED</span>
+                            <span class="hover">침대</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">프레임</a></li>
+                            <li><a href="#">매트리스</a></li>
+                            <li><a href="#">신제품</a></li>
+                            <li><a href="#">제품 매뉴얼</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#"><span class="on">FURNITURE</span><span class="hover">가구</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">룸 세트</a></li>
+                            <li><a href="#">리빙가구</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#"><span class="on">STRESSLESS</span><span
+                                class="hover">스트레스리스</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">1인용 리클라이너</a></li>
+                            <li><a href="#">오피스 체어</a></li>
+                            <li><a href="#">쇼파</a></li>
+                            <li><a href="#">테이브&악세서리</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#"><span class="on">SLEEP CARE</span><span
+                                class="hover">슬립케어</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">마이크로케어</a></li>
+                            <li><a href="#">스마트슬리브</a></li>
+                            <li><a href="#">마이크로케어 쿨링패드</a></li>
+                            <li><a href="#">마이크로가드에코플러스</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-gnb flex">
+                <ul class="right-menu flex">
+                    <li class="main-menu"><a href="#">침대과학</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">스프링</a></li>
+                            <li><a href="#">기술력</a></li>
+                            <li><a href="#">특허 및 수상내역</a></li>
+                            <li><a href="#">침대공학연구소</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">에이스 스토리</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">NOW SNS</a></li>
+                            <li><a href="#">고객후기</a></li>
+                            <li><a href="#">뉴스룸</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">고객체험</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">매트리스 체험존</a></li>
+                            <li><a href="#">이동수면공학 연구소</a></li>
+                            <li><a href="#">공장 견학 신청</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">이벤트</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">당첨자 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">매장안내</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">에이스 스퀘어</a></li>
+                            <li><a href="#">에이스 에비뉴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button><img src="./all-menu-btn.png" alt=""></button>
+            </div>
+        </nav>
+    </header>
+    <script>
+        let ltgnb = document.querySelector('.left-menu');
+        let rtgnb = document.querySelector('.right-menu');
+        let h1 = document.querySelector('h1');
+
+        window.addEventListener('resize', function () {
+            var deviceWidth = window.innerWidth;
+            if (deviceWidth <= 1500) {
+                rtgnb.style.display = 'none';
+            } else {
+                rtgnb.style.display = '';
+            }
+        });
+
+        function menuAni(menu, isRightGnb = false) {
+            menu.addEventListener("mouseenter", () => {
+                menu.querySelectorAll(".sub-menu").forEach(sub => {
+                    sub.style.height = "155px";
+                });
+                h1.style.display = 'none'
+
+            });
+
+            menu.addEventListener("mouseleave", () => {
+                menu.querySelectorAll(".sub-menu").forEach(sub => {
+                    sub.style.height = "0px";
+                });
+                h1.style.display = 'block'
+            });
+        }
+
+        menuAni(ltgnb);
+
+        menuAni(rtgnb);
+
+
+    </script>
+</body>
+
+</html>

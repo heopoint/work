@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+  <!-- <script defer src="./main.js"></script> -->
+  <title>3D Text</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+
+    }
+
+    .stage {
+      width: 100vw;
+      height: 100vh;
+  
+      display: flex;
+      font-size: 3rem;
+      color: #fff;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .utils {
+      perspective: 400px;
+    }
+
+    .utils>div {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #fff;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="stage">
+    <h2>With Me</h2>
+    <div class="utils">
+      <div>Passion</div>
+      <div>eXperience</div>
+      <div>Visual</div>
+      <div>Ideas</div>
+      <div>Details</div>
+
+
+    </div>
+
+  </div>
+  <script>
+    const duration =2
+    const count = gsap.utils.toArray('.utils > div').length
+    const pause = 2;
+    const stagger = duration + pause;
+    const delay = stagger * (count - 1)+pause
+
+    const tl = gsap.timeline();
+ 
+    tl.from('.utils > div', {
+      rotationX: -90,
+      y: 50,
+      opacity: 0,
+      duration:duration,
+     
+      stagger: {
+        each: stagger,
+        repeat: -1,
+        repeatDelay: delay
+      }
+    })
+    tl.to('.utils > div', {
+      rotationX: 90,
+      y: -50,
+      opacity: 0,
+      duration:duration,
+      
+      stagger: {
+        each: stagger,
+        repeat: -1,
+        repeatDelay: delay
+      }
+    }, stagger)
+  </script>
+
+</body>
+
+</html>

@@ -13,6 +13,7 @@
 <body>
   <header>
     <h1><img src="./img/logo.svg" alt=""></h1>
+ 
   </header>
   <!------------------------------------------------->
   <section>
@@ -95,25 +96,51 @@
 
     const frame = document.querySelector('.frame')//하단 영역
     const scene = document.querySelector('.scene')//불러들일 파일을 공간
-
-    articles.forEach((article) => {
-      const h4 = article.querySelector('h4')
-      splitText(h4)
-      // mouseenter 안에 넣어두면 매번 새로고침되서 애니메이션 안됨
-      article.addEventListener('mouseenter', function () {
-        this.classList.add('on')
-        let bg = article.querySelector('h3').dataset.bg
-        section.style.backgroundImage = `url(${bg})`
-       
-        moveUp(h4)
+    function splitText(el) {
+      const txt = el.innerText
+      let tags = ''
+      txt.split('').forEach((letter) => {
+        tags += `<span>${letter}</span>`
       })
+      el.innerHTML = tags
+    }
 
-      article.addEventListener('mouseleave', function () {
-        this.classList.remove('on')
-        const h4 = article.querySelector('h4')
-        resetText(h4)
+    function moveUp(el) {
+  
+      const spans = el.querySelectorAll('span')
+   console.log(spans);
+      spans.forEach((span, i) => {
+        span.style.transitionDelay = `${i * 0.05}s`
+        span.style.transform = "translateY(0)"
+        span.style.opacity = '1'
       })
-    })
+    }
+
+    function resetText(el) {
+      const spans = el.querySelectorAll('span')
+      spans.forEach((span) => {
+        span.style.transform = "translateY(100%)"
+        span.style.opacity = '0'
+      })
+    }
+    // articles.forEach((article) => {
+    //   const h4 = article.querySelector('h4')
+    //   splitText(h4)
+    //   // mouseenter 안에 넣어두면 매번 새로고침되서 애니메이션 안됨
+    //   article.addEventListener('mouseenter', function () {
+    //     this.classList.add('on')
+    //     let bg = article.querySelector('h3').dataset.bg
+    //     section.style.backgroundImage = `url(${bg})`
+
+    //     moveUp(h4)
+    //   })
+
+    //   article.addEventListener('mouseleave', function () {
+    //     this.classList.remove('on')
+    //     const h4 = article.querySelector('h4')
+    //     resetText(h4)
+    //   })
+    // })
 
     document.querySelectorAll('button a').forEach((link) => {
       link.addEventListener('click', function (e) {
@@ -138,32 +165,7 @@
     })
 
     // h4 글자 나누기
-    function splitText(el) {
-      const txt = el.innerText
-      let tags = ''
-      txt.split('').forEach((letter) => {
-        tags += `<span>${letter}</span>`
-      })
-      el.innerHTML = tags
-    }
-
-    function moveUp(el) {
-
-      const spans = el.querySelectorAll('span')
-      spans.forEach((span, i) => {
-        span.style.transitionDelay = `${i * 0.05}s`
-        span.style.transform = "translateY(0)"
-        span.style.opacity = '1'
-      })
-    }
-
-    function resetText(el) {
-      const spans = el.querySelectorAll('span')
-      spans.forEach((span) => {
-        span.style.transform = "translateY(100%)"
-        span.style.opacity = '0'
-      })
-    }
+ 
   </script>
 </body>
 
